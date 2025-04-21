@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho de Livros</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+
+    nav {
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    nav .links a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 20px;
+      font-weight: bold;
+    }
+
+    .perfil {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .perfil img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .perfil-info span {
+      display: block;
+      color: #ecf0f1;
+      font-size: 14px;
+    }
+
+    .carrinho {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #ecf0f1;
+    }
+
+    .produto-img {
+      width: 50px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .remover-btn {
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .resumo {
+      text-align: right;
+      margin-top: 10px;
+    }
+
+    .resumo p {
+      font-size: 18px;
+      margin: 5px 0;
+    }
+
+    .finalizar {
+      background-color: #27ae60;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="links">
+      <a href="#">Início</a>
+      <a href="#">Carrinho</a>
+      <a href="#">Livros</a>
+      <a href="#">Melhores Livros</a>
+    </div>
+    <div class="perfil">
+      <img src="https://via.placeholder.com/40" alt="Perfil">
+      <div class="perfil-info">
+        <span>John Maclebio</span>
+        <span>Saldo: R$ 100,00</span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="carrinho">
+    <h2 style="margin-bottom: 20px;">Seu Carrinho</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Imagem</th>
+          <th>Produto</th>
+          <th>Quantidade</th>
+          <th>Preço</th>
+          <th>Total</th>
+          <th>Ação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="https://via.placeholder.com/50x70" class="produto-img" alt="Livro 1"></td>
+          <td>Livro Exemplo 1<br><small>Autor: Fulano</small></td>
+          <td>1</td>
+          <td>R$ 29,90</td>
+          <td>R$ 29,90</td>
+          <td><button class="remover-btn">Remover</button></td>
+        </tr>
+        <tr>
+          <td><img src="https://via.placeholder.com/50x70" class="produto-img" alt="Livro 2"></td>
+          <td>Livro Exemplo 2<br><small>Autor: Ciclano</small></td>
+          <td>2</td>
+          <td>R$ 39,90</td>
+          <td>R$ 79,80</td>
+          <td><button class="remover-btn">Remover</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="resumo">
+      <p><strong>Subtotal:</strong> R$ 109,70</p>
+      <p><strong>Total:</strong> R$ 109,70</p>
+      <button class="finalizar">Finalizar Compra</button>
+    </div>
+  </div>
+
+</body>
+</html>
